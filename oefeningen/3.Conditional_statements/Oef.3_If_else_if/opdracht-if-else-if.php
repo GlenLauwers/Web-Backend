@@ -1,5 +1,5 @@
 <?php
-	$getal		=	14;
+	$getal		=	24;
 
 	if ($getal >= 0 && $getal < 10)
 	{
@@ -43,8 +43,9 @@
 	}
 	else
 	{
-		$antwoord	=	"Het getal is hoger dan 100.";
+		$antwoord	=	"Dit getal is hoger dan 100.";
 	}
+
 
 	$antwoord_omgek	=	strrev($antwoord)
 ?>

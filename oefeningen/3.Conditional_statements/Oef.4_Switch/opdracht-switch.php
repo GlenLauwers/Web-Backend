@@ -3,36 +3,36 @@
 
     switch ($getal) 
     {
-        case "1":
+        case 1:
             $antwoord = "maandag";
         break;
 
-        case "2":
+        case 2:
             $antwoord = "dinsdag";
         break;
 
-        case "3":
+        case 3:
             $antwoord = "woensdag";
         break;
 
-        case "4":
+        case 4:
             $antwoord = "donderdag";
         break;
 
-        case "5":
+        case 5:
             $antwoord = "vrijdag";
         break;
 
-        case "6":
+        case 6:
             $antwoord = "zaterdag";
         break;
 
-        case "7":
+        case 7:
             $antwoord = "zondag";
         break;
         
         default:
-         $antwoord = "Je hebt geen correcte nummer ingegeven. :-(";
+         	$antwoord = "Je hebt geen correcte nummer ingegeven. :-(";
         break;
     }
 ?>

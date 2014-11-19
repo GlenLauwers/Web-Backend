@@ -1,10 +1,10 @@
 <?php 
 	$aantal_sec		=	221108521;
-	$aantal_min		=	round($aantal_sec	/ 60	);
-	$aantal_uur		=	round($aantal_min 	/ 60	);
-	$aantal_dag		=	round($aantal_uur 	/ 24	);
-	$aantal_week	=	round($aantal_dag 	/ 7		);
-	$aantal_maand	=	round($aantal_dag	/31		);
+	$aantal_min		=	floor($aantal_sec	/ 60	);
+	$aantal_uur		=	floor($aantal_min 	/ 60	);
+	$aantal_dag		=	floor($aantal_uur 	/ 24	);
+	$aantal_week	=	floor($aantal_dag 	/ 7		);
+	$aantal_maand	=	floor($aantal_dag	/31		);
 	$aantal_jaar	=	round($aantal_maand	/12		);
 
 ?>
