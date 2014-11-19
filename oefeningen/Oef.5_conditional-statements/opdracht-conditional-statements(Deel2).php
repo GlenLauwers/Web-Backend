@@ -1,7 +1,7 @@
 <?php
 
     $nummer     =       1; 
-    $dag        =       "_dag";
+    $dag        =       "Deze dag bestaat niet";
     
     if ($nummer == 1) 
     { 
@@ -38,9 +38,14 @@
         $dag = "zondag"; 
     }   
 
-    $dag        =   strtoupper( $dag );
-    $laatste_a  =   strrpos($dag, "A");
-    $dag        =   substr_replace($dag, "a", $laatste_a, 1);
+    if ($nummer >= 1 && $nummer <= 7)
+    {
+        $dag                    =   strtoupper($dag);
+        $dag_hoofdletter_uit    =   str_replace("A", "a", $dag);
+        $laatste_a              =   strrpos($dag, "A");
+        $laatste_letter         =   substr_replace($dag, "a", $laatste_a, 1);
+    }
+
 ?>
 
 <!doctype html>
@@ -62,7 +67,9 @@
                 <li>Zet alle letters in hoofdletters, behalve de 'a'</li>
                 <li>Zet alle letters in hoofdletters, behalve de laatste 'a'</li>
     		</ul>
-                <p>De <?php echo $nummer ?>e dag van de week is: <?php echo $dag ?></p>
+                <p>De <?php echo $nummer ?>e dag van de week is: <?php echo $dag?></p>
+                <p>De <?php echo $nummer ?>e dag van de week is: <?php echo $dag_hoofdletter_uit?></p>
+                <p>De <?php echo $nummer ?>e dag van de week is: <?php echo $laatste_letter?></p>
         </section>
 
     </body>

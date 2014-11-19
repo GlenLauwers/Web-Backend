@@ -1,7 +1,7 @@
 <?php
 
     $nummer     =       1; 
-    $dag        =       "_dag";
+    $dag        =       "Deze dag bestaat niet";
     
     if ($nummer == 1) 
     { 
