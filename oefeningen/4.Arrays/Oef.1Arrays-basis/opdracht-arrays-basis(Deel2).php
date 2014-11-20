@@ -1,29 +1,34 @@
 <?php
 
-    $getallen           =   array (1,2,3,4,5);
-    $vermenigvuldiging  =   array_product($getallen);
-    $aantal				=	count($getallen);
-    $getallen_omgek		=	array_reverse($getallen);
+    $getallen_1         =   array (1,2,3,4,5);
+    $vermenigvuldiging  =   array_product($getallen_1);
+    
+    var_dump($getallen_1);
+    var_dump($vermenigvuldiging);
 
-    $oneven;
-    foreach ($getallen as $value) 
+    $oneven_getal       =   array();
+
+    for ($counter = 0 ; $counter < count ($getallen_1); ++$counter)
     {
-    	if ($value % 2 !=0) 
-    	{
-    		$oneven[] = $value;
-    	}
+        $getal=    $getallen_1[$counter];
+        if ($getal [$counter] % 2 != 0) 
+        {
+           $oneven_getal[] = $getal;        
+        }
     }
 
-    $optellen;
-    foreach ($$getallen as $key => $value) 
+    $getallen_2     =   array_reverse ($getallen_1);
+    $som_array      =   array();
+
+    foreach($getallen_1 as $key => $getal)
     {
-    	if (isset($getallen_omgek [$key])) 
-    	{
-    		$getallenOpgeteld[ $key ]  =  $getallenReverse[ $key ] + $value;
-    	}
+            $getal_1=    $getal;
+            $getal_2=    $getal_2 [$Key];
+
+            $som    =   $getal_1 + $getal_2;
     }
 
-    var_dump(getallen)
+    var_dump($som)
 ?>
 
 <!doctype html>
@@ -50,8 +55,7 @@
 
                 <li>Tel de getallen uit beide arrays met dezelfde index met elkaar op</li>
             </ul>
-
-        
+            <p>Het product van alle getallen uit de eerste array is <?=$vermenigvuldiging ?></p>
         </section>
 
     </body>

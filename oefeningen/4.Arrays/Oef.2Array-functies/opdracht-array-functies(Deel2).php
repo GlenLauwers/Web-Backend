@@ -12,6 +12,21 @@
     {
         $antwoord   = 'niet gevonden :-(';
     }
+
+    var_dump($dieren);
+
+    $dieren_alfa    =   $dieren;
+    sort($dieren_alfa);
+    var_dump($dieren_alfa);
+
+    $zoogdieren     =   array ('Dolfijn', 'Konijn', 'Muis');
+    $dierenlijst    =   array_merge($dieren_alfa, $zoogdieren);
+
+    var_dump($dierenlijst);
+
+    $dierenlijst_alfa    =  $dierenlijst;
+    sort($dierenlijst_alfa);
+    var_dump($dierenlijst_alfa);
 ?>
 <!doctype html>
 <html>
@@ -38,6 +53,16 @@
             <h1>Oplossing</h1>
             <p>Aantal soorten dieren: <?= $aantal ?></p>
             <p>Het gezochte dier is <?=$antwoord ?></p>
+
+            <h1 class="extra">Opdracht array functies: deel 2</h1>
+
+            <ul>
+                <li>Ga verder op deel 1 (maar maak een aparte kopie voor, overschrijf het origineel niet!)</li>
+
+                <li>Zorg ervoor dat de array volgens het alfabet gesorteerd wordt ( A -> Z )</li>
+
+                <li>Maak een array <code>$zoogdieren</code> en plaats hier 3 dieren in, voeg vervolgens de 2 arrays met dieren samen in de array <code>$dierenlijst</code></li>
+            </ul>
 
         </section>
 
