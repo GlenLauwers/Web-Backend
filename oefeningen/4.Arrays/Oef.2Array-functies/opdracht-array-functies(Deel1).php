@@ -1,7 +1,7 @@
 <?php
     $dieren             = array('Hond', 'Kat', 'Schaap', 'Schildpad', 'Kip', 'Cavia' );
     $aantal             = count($dieren);
-    $gezocht_dier       = 'Hond';
+    $gezocht_dier       = 'lama';
     $te_zoeken_dieren   = in_array($gezocht_dier, $dieren);
 
     if ($te_zoeken_dieren == true) 
@@ -10,7 +10,7 @@
     }
     else
     {
-        $antwoord   = 'niet gevonden :-(';
+        $antwoord   = 'niet gevonden. Jammer :-(';
     }
 ?>
 <!doctype html>
