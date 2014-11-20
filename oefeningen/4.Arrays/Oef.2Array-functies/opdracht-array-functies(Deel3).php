@@ -6,7 +6,7 @@
     var_dump($unieke_lijst);
 
     $lijst_gest   = $unieke_lijst;
-    sort($lijst_gest);
+    arsort($lijst_gest);
     var_dump($lijst_gest);
 ?>
 <!doctype html>
