@@ -1,13 +1,11 @@
 <?php
     $lijst        =   array (8, 7, 8, 7, 3, 2, 1, 2, 4);
-    var_dump($lijst);
 
     $unieke_lijst = array_unique($lijst);
-    var_dump($unieke_lijst);
 
     $lijst_gest   = $unieke_lijst;
     arsort($lijst_gest);
-    var_dump($lijst_gest);
+
 ?>
 <!doctype html>
 <html>
@@ -35,6 +33,13 @@
 
             </ul>
 
+        <h1>Oplossingen</h1>
+        <p>Array.</p>
+        <pre><?php var_dump($lijst) ?></pre>    
+        <p>Haal de duplicaten uit de array.</p>
+        <pre><?php var_dump($unieke_lijst) ?></pre> 
+        <p>Sorteer de array van groot naar klein.</p>   
+        <pre><?php var_dump($lijst_gest) ?></pre>
         </section>
 
     </body>
