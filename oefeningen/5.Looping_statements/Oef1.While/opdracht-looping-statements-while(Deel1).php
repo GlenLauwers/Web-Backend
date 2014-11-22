@@ -1,22 +1,31 @@
 <?php
-    
-    $nummer =  0;
-    while ($nummer <= 100) 
+    #Deel 1
+    $getal_lijst	= array();
+    $nummer			=  0;
+   	$max_getal		=	100;
+
+    while ($nummer < $max_getal) 
     {
-        echo $nummer . ', ';
+        $getal_lijst[] = $nummer;
         ++$nummer;
+
     }
 
+	$opsomming_1	=	implode( ', ', $getal_lijst );
+
+	#Deel 2
     $nummer =   0;
     $lijst  =   array();
-    while ($nummer <= 100) {
+    while ($nummer < $max_getal) 
+    {
         if ($nummer %3== 0 && $nummer >40 && $nummer <80)
         {
             $antwoord[]   =   $nummer;
         }
     ++$nummer;
     }
-    var_dump($antwoord);
+
+    $opsomming_2	=	implode(', ', $antwoord);
 
 
 ?>
@@ -41,6 +50,13 @@
 
             <li>Op een volgende lijn druk je alle getallen af die deelbaar zijn door 3 én groter zijn dan 40 mààr kleiner zijn dan 80.</li>
         </ul>
+
+        <h1>Oplossingen</h1>
+        <p><b>Druk alle getallen af van 0 tot 100 afgescheiden door een komma en een spatie ' , '.</b></p>
+        <p><?php echo $opsomming_1 ?></p>
+
+        <p><b>Op een volgende lijn druk je alle getallen af die deelbaar zijn door 3 én groter zijn dan 40 mààr kleiner zijn dan 80.</b></p>
+        <p><?php echo $opsomming_2 ?></p>
 
     </body>
 </html>
