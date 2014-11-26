@@ -1,43 +1,12 @@
-<?php
-
-	function berekenSom ($getal1, $getal2)
-	{
-		$berekening	=	$getal1 + $getal2;
-		return $berekening; 
-	}
-
-	$oplossing_opt 	=	berekenSom(1,4);
-
-
-	function bereken_verm ($getal1, $getal2)
-	{
-		$berekening	=	$getal1 * $getal2;
-		return $berekening; 
-	}
-
-	$oplossing_ver 	=	bereken_verm(3,4);
-
-	function even ($getal)
-	{
-		if ($getal %2 == 0) 
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
-	}
-	$oplossing_even	=	even(3);
-
-?>
-
 <!doctype html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Opdracht functies</title>
+        <link rel="stylesheet" href="http://web-backend.local/css/global.css">
+        <link rel="stylesheet" href="http://web-backend.local/css/facade.css">
+        <link rel="stylesheet" href="http://web-backend.local/css/directory.css">
     </head>
     <body class="web-backend-opdracht">
         
@@ -80,10 +49,45 @@
                 <li class="extension">Maak een functie aan die de lengte én de uppercase-versie van een string returnt. Druk daarna de lengte en de uppercase-versie van de string af buiten de functie. <span class="tip">return een array.</span></li>
 
             </ul>
-       	<h1>Oplossingen</h1>
-       	<p>Optelling:<?=$oplossing_opt ?></p>
-       	<p>Vermenigvuldiging:<?=$oplossing_ver ?></p> </p>
-       	<p>Is het getal even? <pre><?php var_dump($oplossing_even)?></pre></p>
+
+            <h1 class="extra">Opdracht functies: deel 2</h1>
+
+            <ul>
+                <li>Maak een functie <code>drukArrayAf</code> die 1 parameter heeft, <code>$array</code></li>
+
+                <li>Deze <code>$array</code> bevat enkele waarden die je zelf mag kiezen</li>
+
+                <li>Zorg ervoor dat je uiteindelijk tot dit resultaat komt:
+
+                    <ul>
+                        <li>
+                            <div class="facade-minimal" data-url="http://www.app.local/index.php">
+                                
+                                <h1>Opdracht functies</h1>
+                                
+                                <p>helden[ 0 ] heeft waarde 'Elon Musk'</p>  
+                            
+                            </div>
+                            
+                        </li>
+
+                        <li>De naam van de array afdrukken is niet zo belangerijk (mag hardcoded of via een andere inventieve manier)</li>
+                        
+                        <li class="extension">Zorg ervoor dat je ook meerdimensionale arrays kan afdrukken op dezelfde manier</li>
+                    </ul>
+                </li>
+
+                <li>Maak een functie <code>validateHtmlTag</code> die 1 parameter heeft, <code>$html</code>
+
+                    <ul>
+                        <li>Zorg ervoor dat deze functie kan valideren of er een correcte &lt;html&gt;&lt;/html&gt; tag aanwezig is in de gegeven string <code>$html</code></li>
+                    </ul>
+                </li>
+
+                <li>Voer al deze functies uit en zorg ervoor dat de resultaten op het scherm verschijnen</li>
+
+            </ul>
+
         </section>
 
     </body>
