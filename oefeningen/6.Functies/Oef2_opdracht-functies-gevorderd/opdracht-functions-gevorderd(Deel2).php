@@ -1,26 +1,25 @@
 <?php
     $pig_health      =   5;
     $maximum_throws  =   8;
-    $minimum_throws  =   0;
 
     $verloop_spel   =   array();
 
     function calculateHit ()
     {
         global $pig_health;
-        $kans       =   rand(0,100);
-        $raak       =   ( $kans <= 40 ) ? true : false;
+        $kans       =   rand(0,9);
+        $raak       =   ( $kans <= 4 ) ? true : false;
 
         if ($raak)
         {
             --$pig_health;
             $array['geraakt']     =   true;
-            $array['antwoord']    =   'Raak! Er zijn nog maar ' . $pig_health . ' varkens over.'; 
+            $array['antwoord']    =   'Jey, Raak! Er zijn nog maar ' . $pig_health . ' varkens over.'; 
         }
         else
         {
             $array['geraakt']     =   false;
-            $array['antwoord']    =   'Mis! Nog ' . $pig_health . ' varkens in het team.';
+            $array['antwoord']    =   'Dju Mis! Nog ' . $pig_health . ' varkens in het team.';
         }
 
         return $array;
@@ -44,11 +43,11 @@
         {
             if ( $pig_health > 0 )
             {
-               $verloop_spel[]   =   'Oh, jammer. Je hebt verloren.'; 
+               $verloop_spel[]   =   'Oh, helaas pindakaas. Je hebt verloren. :-('; 
             }
             else
             {
-                $verloop_spel[]   =   'Joepieeeeee! Je hebt gewonnen!';
+                $verloop_spel[]   =   'Joepieeeeee!!!!!! Je hebt gewonnen! :-)';
             }
         }
     } 
@@ -62,12 +61,44 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Opdracht functies gevorderd: Deel 2</title>
+        <style>
+            body{
+                background: url("angry-birds.jpg") 
+                    no-repeat center center fixed;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;
+                }
+
+            p{
+                font-family: sans-serif;
+                font-size: 20px;
+
+            }
+
+            #hoofding{
+                color: white;
+                background-color: lightblue;
+            }
+
+            #content{
+                color: white;
+                background-color: lightblue;
+                margin-right: 400px;
+                margin-left: 470px;
+            }
+
+        </style>
     </head>
     <body>
-    <h1>Oplossingen functies gevorderd: Deel 2</h1>
-    <h2>Angry Birds</h2>
-            <?php foreach( $verloop_spel as $resultaat ): ?>
-                <p><?= $resultaat ?></p>
-            <?php endforeach ?>
+    <div id="hoofding">
+        <h1>Oplossingen functies gevorderd: Deel 2</h1>
+    </div>
+    <div id="content">
+        <?php foreach( $verloop_spel as $resultaat ): ?>
+            <p><?= $resultaat ?></p>
+        <?php endforeach ?>
+    </div>
     </body>
 </html>

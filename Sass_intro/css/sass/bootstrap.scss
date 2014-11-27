@@ -1,0 +1,21 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_normalize.scss";
+body
+{
+	font-size: 100%;
+	background-color: $primary-color;
+}
+
+p
+{
+	background-color: $secondary-color;
+	@include border-radius(5px);
+}
+
+.test
+{
+	background-color: $secondary-color;
+}
+
+@import "_header.scss";
