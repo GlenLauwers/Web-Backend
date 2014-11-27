@@ -1,78 +1,73 @@
+<?php
+    $pig_health      =   5;
+    $maximum_throws  =   8;
+    $minimum_throws  =   0;
+
+    $verloop_spel   =   array();
+
+    function calculateHit ()
+    {
+        global $pig_health;
+        $kans       =   rand(0,100);
+        $raak       =   ( $kans <= 40 ) ? true : false;
+
+        if ($raak)
+        {
+            --$pig_health;
+            $array['geraakt']     =   true;
+            $array['antwoord']    =   'Raak! Er zijn nog maar ' . $pig_health . ' varkens over.'; 
+        }
+        else
+        {
+            $array['geraakt']     =   false;
+            $array['antwoord']    =   'Mis! Nog ' . $pig_health . ' varkens in het team.';
+        }
+
+        return $array;
+    
+    }
+
+    function launchAngryBird ()
+    {
+        global $pig_health;
+        global $maximum_throws;
+        global $verloop_spel;
+
+        if ( $maximum_throws != 0 && $pig_health > 0 )
+        {
+            $geraakt_resultaat = calculateHit( );
+            --$maximum_throws;
+            $verloop_spel[]  =   $geraakt_resultaat['antwoord'];
+            launchAngryBird();
+        }
+        else
+        {
+            if ( $pig_health > 0 )
+            {
+               $verloop_spel[]   =   'Oh, jammer. Je hebt verloren.'; 
+            }
+            else
+            {
+                $verloop_spel[]   =   'Joepieeeeee! Je hebt gewonnen!';
+            }
+        }
+    } 
+
+    launchAngryBird( );
+?>
+
 <!doctype html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Opdracht functies gevorderd</title>
+        <title>Opdracht functies gevorderd: Deel 2</title>
     </head>
-    <body class="web-backend-opdracht">
-        
-        <section class="body">
-
-            <h1 class="extra">Opdracht functies gevorderd: deel 2 (Angry Birds)</h1>
-
-            <ul>
-               
-                <li>De bedoeling is om een versimpelde tekstversie van Angry Birds te maken (<a href="http://chrome.angrybirds.com/" target="_blank">http://chrome.angrybirds.com/</a>)</li>
-
-                <li>Maak een global variable <code>$pigHealth</code> met value <code>5</code> en een global variable <code>$maximumThrows</code> met value <code>8</code></li>
-
-                <li>Maak een functie <code>calculateHit</code>. Deze functie staat in voor:
-                    <ul>
-                        <li>Het berekenen van de raakkans (40%). Gebruik hiervoor de functie <code>rand</code>.
-
-                        <li>Het verminderen van de <code>$pigHealth</code> variable met één van zodra er raak is geschoten.
-
-                        <li>Het teruggeven van de string <code>'Raak! Er zijn nog maar xxx varkens over.'</code> of <code>'Mis! Nog xxx varkens in het team.'</code> naargelang het resultaat van het willekeurige getal. De xxx moet vervangen worden door het effectieve getal.
-                    </li>
-                </li>
-
-                <li>Maak een functie <code>launchAngryBird</code>. Deze functie staat in voor:
-                    <ul>
-                        <li>Deze functie bevat een static variable om bij te houden hoeveel keer de functie reeds is aangeroepen.
-
-                        <li>Zolang deze static variable kleiner is dan het aantal <code>$maximumThrows</code> wordt de static variable met één vermeerderd en spreekt de functie <code>launchAngryBird</code> zichzelf weer aan.
-
-                        <li>Van zodra de static variabele gelijk is de <code>$maximumThrows</code> wordt er gekeken of het <code>$pigHealth</code> gelijk is aan nul. Als dit het geval is moet de boodschap <code>'Gewonnen!'</code> verschijnen. Is de variable pigHealth groter dan nul verschijnt de boodschap <code>'Verloren!'</code>
-                        </li>
-                    </ul>
-                </li>
-
-
-                <li>Je mag de functie <code>launchAngryBird</code> maximum één keer aanroepen in het document.</li>
-
-                <li>
-                    Het eindresultaat moet er ongeveer als volgt uitzien:
-
-                    <div class="facade-minimal" data-url="http://www.app.local/index.php">
-
-                        <h1>Text-based Angry Birds</h1>
-                    
-                        <p>Raak! Er zijn nog maar 4 varkens over.</p>
-                       
-                        <p>Raak! Er zijn nog maar 3 varkens over.</p>
-                       
-                        <p>Mis! Er zijn nog 3 varkens over.</p>
-                       
-                        <p>Mis! Er zijn nog 3 varkens over.</p>
-                       
-                        <p>Mis! Er zijn nog 3 varkens over.</p>
-
-                        <p>Raak! Er zijn nog maar 1 varkens over.</p>
-
-                        <p>Raak! Er zijn nog maar 0 varkens over.</p>
-
-                        <p>Gewonnen!</p>
-
-                    </div>
-                </li>
-
-                <li class="extension">Zorg ervoor dat de tekst grammatisch correct is wanneer <code>$pigHealth</code> gelijk is aan 1</li>
-
-                <li class="extension">Zorg ervoor dat de functie automatisch stopt wanneer <code>$pigHealth</code> gelijk is aan 0</li>
-
-            </ul>
-        </section>
-
+    <body>
+    <h1>Oplossingen functies gevorderd: Deel 2</h1>
+    <h2>Angry Birds</h2>
+            <?php foreach( $verloop_spel as $resultaat ): ?>
+                <p><?= $resultaat ?></p>
+            <?php endforeach ?>
     </body>
 </html>
