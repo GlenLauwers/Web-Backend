@@ -44,12 +44,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Opdracht functies gevorderd: Deel 1</title>
+        <title>Oplossingen functies gevorderd: deel 1</title>
 
     </head>
     <body>
 
         <h1>Oplossingen functies gevorderd: deel 1</h1>
+        
         <p>De needle '<?= $gezocht1?>' komt <?=$functie1 ?> % voor in de hash key '<?= $md5HashKey ?>'.</p>
         <p>De needle '<?= $gezocht2?>' komt <?=$functie2 ?> % voor in de hash key '<?= $md5HashKey ?>'.</p>
         <p>De needle '<?= $gezocht3?>' komt <?=$functie3 ?> % voor in de hash key '<?= $md5HashKey ?>'.</p>
