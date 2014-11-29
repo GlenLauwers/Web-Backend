@@ -53,20 +53,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Opdracht conditional statements</title>
+        <title>Oplossing conditional statements: deel 2</title>
     </head>
     <body class="web-backend-opdracht">
         
         <section class="body">
 
-    		<h1 class="extra">Opdracht conditional statements: deel 2</h1>
+    		<h1 class="extra">Oplossing conditional statements: deel 2</h1>
 
-    		<ul>
-                <li>Maak een kopie van deel 1</li>
-    			<li>Zet de naam van de dag (bv <code>'maandag'</code>) doormiddel van een string-functie dan naar hoofdletters om (bv <code>'MAANDAG'</code>).</li>
-                <li>Zet alle letters in hoofdletters, behalve de 'a'</li>
-                <li>Zet alle letters in hoofdletters, behalve de laatste 'a'</li>
-    		</ul>
                 <p>De <?php echo $nummer ?>e dag van de week is: <?php echo $dag?></p>
                 <p>De <?php echo $nummer ?>e dag van de week is: <?php echo $dag_hoofdletter_uit?></p>
                 <p>De <?php echo $nummer ?>e dag van de week is: <?php echo $laatste_letter?></p>

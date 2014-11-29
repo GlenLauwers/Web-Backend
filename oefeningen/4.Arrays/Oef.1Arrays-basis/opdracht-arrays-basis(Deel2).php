@@ -3,32 +3,33 @@
     $getallen_1         =   array (1,2,3,4,5);
     $vermenigvuldiging  =   array_product($getallen_1);
     
-    var_dump($getallen_1);
-    var_dump($vermenigvuldiging);
+    //var_dump($getallen_1);
+    //var_dump($vermenigvuldiging);
 
     $oneven_getal       =   array();
 
-    for ($counter = 0 ; $counter < count ($getallen_1); ++$counter)
+    for ($counter   =   0;  $counter < count ($getallen_1); ++$counter)
     {
-        $getal=    $getallen_1[$counter];
-        if ($getal [$counter] % 2 != 0) 
+        $getal  =   $getallen_1[$counter];
+
+        if ($getal %2 !=0)
         {
-           $oneven_getal[] = $getal;        
+            $oneven_getal[] =   $getal;
         }
     }
+    var_dump($oneven_getal);
 
     $getallen_2     =   array_reverse ($getallen_1);
-    $som_array      =   array();
+    $som_array      =   array ();
 
-    foreach($getallen_1 as $key => $getal)
+    foreach ($getallen_1 as $key => $getal)
     {
-            $getal_1=    $getal;
-            $getal_2=    $getal_2 [$Key];
-
-            $som    =   $getal_1 + $getal_2;
+        $getal1     =   $getal;
+        $getal2     =   $getallen_2 [$key];
+        $som_array[]=   $getal1 + $getal2;  
     }
 
-    var_dump($som)
+    var_dump($som_array)
 ?>
 
 <!doctype html>
@@ -36,27 +37,18 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Opdracht arrays basis</title>
+        <title>Opdracht arrays basis: Deel 2</title>
     </head>
     <body class="web-backend-opdracht">
-        
-        <section class="body">
-        
-            <h1 class="extra">Opdracht arrays basis: deel 2</h1>
+        <h1>Oplossing arrays basis: Deel 2</h1>
 
-            <ul>
-                <li>Maak een array waarin je de getallen 1, 2, 3, 4, 5 in plaatst</li>
+        <h2>Product</h2>
+        <p>Het product van alle getallen is <?= $vermenigvuldiging ?>.</p>
 
-                <li>Vermenigvuldig alle getallen met elkaar en druk af naar het scherm</li>
+        <h2>Oneven getallen</h2>
+        <pre><?php var_dump($oneven_getal)?></pre>
 
-                <li>Druk de oneven getallen af (controle in script, niet zelf selecteren welke je afdrukt)</li>
-
-                <li>Maak een tweede array waarin je de getallen 5, 4, 3, 2, 1 in plaatst</li>
-
-                <li>Tel de getallen uit beide arrays met dezelfde index met elkaar op</li>
-            </ul>
-            <p>Het product van alle getallen uit de eerste array is <?=$vermenigvuldiging ?></p>
-        </section>
-
+        <h2>Som van de twee arrays</h2>
+        <pre><?php var_dump($som_array) ?></pre>
     </body>
 </html>

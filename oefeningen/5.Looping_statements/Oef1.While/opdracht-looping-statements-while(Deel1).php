@@ -35,27 +35,18 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Opdracht while</title>
+        <title>Oplossing while: deel 1</title>
     </head>
     <body class="web-backend-opdracht">
         
         <section class="body">  
         
-        <h1>Opdracht while: deel 1</h1>
+        <h1>Oplossing while: deel 1</h1>
 
-        <ul>
-
-            <li>Druk alle getallen af van 0 tot 100 afgescheiden door een komma en 
-            een spatie ' , '.</li>
-
-            <li>Op een volgende lijn druk je alle getallen af die deelbaar zijn door 3 én groter zijn dan 40 mààr kleiner zijn dan 80.</li>
-        </ul>
-
-        <h1>Oplossingen</h1>
-        <p><b>Druk alle getallen af van 0 tot 100 afgescheiden door een komma en een spatie ' , '.</b></p>
+        <h2>Getallen van 0 tot 100</h2>
         <p><?php echo $opsomming_1 ?></p>
 
-        <p><b>Op een volgende lijn druk je alle getallen af die deelbaar zijn door 3 én groter zijn dan 40 mààr kleiner zijn dan 80.</b></p>
+        <h2>Getallen deelbaar door 3 en groter dan 40 maar kleiner dan 80</h2>
         <p><?php echo $opsomming_2 ?></p>
 
     </body>

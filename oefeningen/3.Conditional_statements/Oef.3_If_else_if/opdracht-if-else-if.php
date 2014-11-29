@@ -54,19 +54,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Opdracht if else if</title> 
+        <title>Oplossing if else if</title> 
     </head>
     <body class="web-backend-opdracht">
         
         <section class="body">
         
-            <h1>Opdracht if else if: deel 1</h1>
-
-            <ul>
-                <li>Maak een getal met een waarde tussen 1-100</li>
-                <li>Zorg ervoor dat het script kan zeggen tussen welke tientallen het getal ligt, bv 'Het getal ligt tussen 20 en 30'.</li>
-                <li>Zorg er vervolgens voor dat de boodschap omgekeerd afgedrukt wordt, bv '03 ne 02 nessut tgil lateg teH'.</li>
-            </ul>  
+            <h1>Oplossing if else if</h1>
         
         <p>Mijn getal is: <?= $getal ?></p>
         <p><?= $antwoord ?></p>

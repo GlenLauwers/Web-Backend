@@ -11,13 +11,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Opdracht string extra functions</title>
+        <title>Oplossing string extra functions: deel 1</title>
     </head>
     <body class="web-backend-opdracht">
         
         <section class="body">
         
-            <h1>Opdracht string extra functions: deel 1</h1>
+            <h1>Oplossing string extra functions: deel 1</h1>
 
             <ul>
                 <li><?=$fruit?></li>

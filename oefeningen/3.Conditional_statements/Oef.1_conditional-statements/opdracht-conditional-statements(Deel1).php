@@ -44,19 +44,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Opdracht conditional statements</title>
+        <title>Oplossing conditional statements: Deel 1</title>
     </head>
     <body class="web-backend-opdracht">
         
         <section class="body">
         
-            <h1>Opdracht conditional statements: deel 1</h1>
+            <h1>Oplossing conditional statements: deel 1</h1>
 
-            <ul>
-                <li>Maak een HTML-document met een PHP code-block</li>
-                <li>Maak een PHP-script dat aan de hand van een getal ( tussen 1 en 7 ) de bijhorende dag afprint in kleine letters (geen hoofdletters!)</li>
-                <li>Bijvoorbeeld, wanneer <code>$getal</code> gelijk is aan 1 dan wordt de string <code>'maandag'</code> op het scherm getoond</li>
-            </ul>  
                   <p>De <?php echo $nummer ?>e dag van de week is: <?php echo $dag ?></p>
 
         </section>

@@ -61,36 +61,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Opdracht functies gevorderd: Deel 2</title>
-        <style>
-            body{
-                background: url("angry-birds.jpg") 
-                    no-repeat center center fixed;
-                    -webkit-background-size: cover;
-                    -moz-background-size: cover;
-                    -o-background-size: cover;
-                    background-size: cover;
-                }
-
-            p{
-                font-family: sans-serif;
-                font-size: 20px;
-
-            }
-
-            #hoofding{
-                color: white;
-                background-color: lightblue;
-            }
-
-            #content{
-                color: white;
-                background-color: lightblue;
-                margin-right: 400px;
-                margin-left: 470px;
-            }
-
-        </style>
     </head>
+    
     <body>
     <div id="hoofding">
         <h1>Oplossingen functies gevorderd: Deel 2</h1>

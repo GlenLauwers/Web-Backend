@@ -18,23 +18,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Opdracht if else</title> 
+        <title>Oplossing if else: deel 1</title> 
     </head>
     <body class="web-backend-opdracht">
         
         <section class="body">
         
-            <h1>Opdracht if else: deel 1</h1>
-
-            <ul>
-                <li>Maak een PHP-script dat kan bepalen of de variabele 'jaartal' al dan niet een schrikkeljaar is
-                    <ul>
-                        <li>Een jaar is een schrikkeljaar als het deelbaar is door 4</li>
-                        <li>Een jaartal deelbaar door 100 is geen schrikkeljaar</li>
-                        <li>Een jaartal deelbaar door 400 is wel een schrikkeljaar</li>
-                    </ul>
-                </li>
-            </ul>  
+            <h1>Oplossing if else: deel 1</h1>
+ 
             <p>Is <?= $jaartal ?> een schrikkeljaar? <?= $antwoord ?></p>
         </section>
 
