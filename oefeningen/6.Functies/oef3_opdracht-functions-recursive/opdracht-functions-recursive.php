@@ -8,8 +8,8 @@
 		static $jaar_bijtellen	=	1; //begin van de berekening (na 1 jaar)
 		static $lijst			=	array();
 
-		$winst	=	$beginwaarde * ($rentevoet/100);
-		$totaal	=	$beginwaarde + $winst;
+		$winst		=	$beginwaarde * ($rentevoet/100);
+		$totaal		=	$beginwaarde + $winst;
 
 		$lijst[]	=	'Na ' .$jaar_bijtellen.' jaar sparen heeft Hans €' .floor ($totaal). ' op z\'n rekening staan, en heeft hij een winst van €' .floor ($winst).'.';
 
