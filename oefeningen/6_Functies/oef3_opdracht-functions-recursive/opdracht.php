@@ -31,7 +31,7 @@
 
                 <li>Maak gebruik van een recursieve functie om te berekenen hoeveel geld Hans na 10 jaar zal overhouden</li>
 
-                <li>Zorg er ook voor dat Hans kan ziet hoeveel zijn geld na elk jaar waard is. Rond daarbij alle getallen af naar beneden.</li>
+                <li>Zorg er ook voor dat Hans kan zien hoeveel zijn geld na elk jaar waard is. <b>Rond daarbij alle getallen af naar beneden.</b></li>
 
                 <li>
                     Als je je verbonden voelt met de onderstaande meme, vraag dan even wat uitleg om je op weg te helpen.
