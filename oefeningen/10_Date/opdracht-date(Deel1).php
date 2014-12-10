@@ -2,7 +2,7 @@
     $timestamp      =   mktime (22, 35, 25, 1, 21, 1904);
     //var_dump($timestamp);
     
-    $datum          =   date ('d F Y, g:i:s a' , $timestamp);
+    $datum          =   date ('d F Y, h:i:s a' , $timestamp);
     //var_dump($datum);
 
 
