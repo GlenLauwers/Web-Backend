@@ -36,11 +36,11 @@
         
             <h1>Oplossing post</h1>
             
-            <h2>Log in.</h2>
+            <h2>Log in</h2>
 
             <p><?= $bericht ?></p>
 
-            <form action="opdracht-post.php" method="POST">
+            <form action="<?= $_SERVER['PHP_SELF']?>" method="POST">
                 <ul>
                     <li>
                         <label for="Gebruikersnaam">Gebruikersnaam:</label>
