@@ -3,12 +3,12 @@
     $timestamp      =   mktime (22, 35, 25, 1, 21, 1904);
     //var_dump($timestamp);
 
-    $datum_engels          =   date ('d F Y, g:i:s a' , $timestamp);
+    $datum_engels   =   date ('d F Y, g:i:s a' , $timestamp);
     //var_dump($datum);
 
     setlocale(LC_ALL, 'nl_NL');
 
-    $datum_nl   =    strftime("%d %B %Y, %H:%M:%S", $timestamp);
+    $datum_nl       =   strftime("%d %B %Y, %H:%M:%S", $timestamp);
     //var_dump($datum_nl);
 
 
