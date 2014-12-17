@@ -12,7 +12,7 @@
         
         <section class="body">
         
-    		<h1>Opdracht string concatenate: deel 1</h1>
+    		<h1>Opdracht string concatenate</h1>
 
     		<ul>
                 <li>Plaats je voornaam en familienaam in afzonderlijke variabelen</li>

@@ -10,13 +10,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Oplossing string concatenate: deel 1</title>
+        <title>Oplossing string concatenate</title>
     </head>
     <body class="web-backend-opdracht">
         
         <section class="body">
         
-    		<h1>Oplossing string concatenate: deel 1</h1>
+    		<h1>Oplossing string concatenate</h1>
 
     		<ul>
                 <li><?= $Voornaam ?> <?= $Achternaam?></li>

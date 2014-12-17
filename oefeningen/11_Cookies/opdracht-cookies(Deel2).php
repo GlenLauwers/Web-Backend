@@ -14,17 +14,17 @@
     {
         if (isset($_POST['submit']))
         {
-            if ( $_POST['gebruikersnaam']   == $array[0] &&
-                 $_POST['paswoord']         == $array[1] &&
-                 $_POST['onthouden']       ==  false)
+            if ( $_POST['gebruikersnaam']   === $array[0] &&
+                 $_POST['paswoord']         === $array[1] &&
+                 $_POST['onthouden']       	===  false)
             {
                 setcookie('uniek', true, time() + 3600);
                 header('location: opdracht-cookies(Deel2).php');
             }
             
-            if ( $_POST['gebruikersnaam']   == $array[0] &&
-                 $_POST['paswoord']         == $array[1] &&
-                 $_POST['onthouden']        == true)
+            if ( $_POST['gebruikersnaam']   === $array[0] &&
+                 $_POST['paswoord']         === $array[1] &&
+                 $_POST['onthouden']        === true)
             {
 
                 setcookie('uniek', true, time() + 2595600);
@@ -55,7 +55,7 @@
         <h1>Oplossing cookies: deel 2</h1>
         
         <?php if ($bericht): ?>
-            <?= $bericht ?>
+            <p><?= $bericht ?></p>
         <?php endif ?>
 
         <?php if (!$uniek ): ?>

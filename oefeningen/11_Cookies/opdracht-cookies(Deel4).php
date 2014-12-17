@@ -1,6 +1,6 @@
 <?php
     $tekst_bestand  =   file_get_contents('tekst2.txt');
-    $array          =   JSON_decode( $tekst_bestand, true );
+    $array          =   JSON_decode( $tekst_bestand, true);
     $bericht        =   false;
     $uniek          =   false;
 
@@ -16,16 +16,16 @@
 		{
 			foreach ($array as $id => $lijst)
 			{
-				if ( $_POST['gebruikersnaam'] 	== $lijst['username'] &&
-					 $_POST['paswoord'] 		== $lijst['password'])
+				if ( $_POST['gebruikersnaam'] 	=== $lijst['username'] &&
+					 $_POST['paswoord'] 		=== $lijst['password'])
 				{
-					$tijd	=	(isset($_POST['onthouden']) ? (time() + 259200) : time() + 3600);
-					setcookie('uniek', $id, $tijd);
+					$tijd_bewaring	=	(isset($_POST['onthouden']) ? (time() + 60*60*24*30) : time() + 3600);
+					setcookie('uniek', $id, $tijd_bewaring);
 					header('location: opdracht-cookies(Deel4).php');
 				}
 			}
 	
-			$message = 'Er ging iets mis. Probeer opnieuw.';		
+			$bericht = 'Oeps!! Er ging iets mis. :-(  Probeer opnieuw.';		
 		}
 	
 	if (isset($_COOKIE['uniek']))
@@ -35,8 +35,8 @@
 		$uniek		=	true;
 	}
 ?>
-<!doctype html>
 
+<!doctype html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -49,7 +49,7 @@
         <h1>Oplossing cookies: deel 4</h1>
         
         <?php if ($bericht): ?>
-            <?= $bericht ?>
+            <p><?= $bericht ?></p>
         <?php endif ?>
 
         <?php if (!$uniek ): ?>

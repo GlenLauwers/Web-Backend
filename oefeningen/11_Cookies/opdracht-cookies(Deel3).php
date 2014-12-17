@@ -57,7 +57,7 @@
         <h1>Oplossing cookies: deel 3</h1>
         
         <?php if ($bericht): ?>
-            <?= $bericht ?>
+            <p><?= $bericht ?></p>
         <?php endif ?>
 
         <?php if (!$uniek ): ?>

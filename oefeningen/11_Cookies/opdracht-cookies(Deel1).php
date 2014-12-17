@@ -6,7 +6,6 @@
 
     if (isset( $_GET['loguit']))
     {
-
         setcookie('uniek', '', time() - 1000);
         header('location: opdracht-cookies(Deel1).php');
     }
@@ -15,8 +14,8 @@
     {
         if (isset($_POST['submit']))
         {
-            if ( $_POST['gebruikersnaam']   == $array[0] &&
-                 $_POST['paswoord']         == $array[1])
+            if ( $_POST['gebruikersnaam']   === $array[0] &&
+                 $_POST['paswoord']         === $array[1])
             {
                 setcookie('uniek', true, time() + 3600);
                 header('location: opdracht-cookies(Deel1).php');
@@ -48,7 +47,7 @@
         <h1>Oplossing cookies: deel 1</h1>
         
         <?php if ($bericht): ?>
-            <?= $bericht ?>
+            <p><?= $bericht ?></p>
         <?php endif ?>
 
         <?php if (!$uniek ): ?>
