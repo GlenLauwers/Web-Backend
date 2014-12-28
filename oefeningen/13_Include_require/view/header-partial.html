@@ -3,91 +3,114 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Oplossing include/require</title>
+        <title>Opdracht include/require</title>
         <style>
-    
-            body
-            {
-                margin: 0 auto;
-                width: 900px;
-                font: arial;
+            
+            .group:after {
+              content: "";
+              display: table;
+              clear: both;
             }
 
-            ul
-            {
-                margin:5px;
-                padding:0px;
-                list-style-type:none;
-            }
-            
-            li
-            {
-                color: white;
-                display:inline;
+            body {
+                margin:0px;
+                font-family:sans-serif;
             }
 
             header
             {
-                background-color:black;
-                height: 30px;
+                background-color:#2B3536;
+                color:#FFFFFF;
+                padding:12px 6px;
             }
-            
-            header .links
+
+            header .logo
             {
-                float: left;
+                float:left;
+                font-size:18px;
             }
-            
-            header .rechts
+
+            header .logo a
             {
-                float: right;
+                float:left;
+                font-size:18px;
+                text-decoration:none;
             }
-            
-            a
+            header .logo span
             {
-                text-decoration: none;
-                color: white;
+                font-weight:bold;
             }
-            
-            a:hover
+
+            header a
             {
-                text-decoration: underline;
+               color:#FFFFFF; 
             }
-            
             nav
             {
-                text-align:right;
+                float:right;
+            }
+
+            nav ul
+            {
+                list-style-type:none;
+                padding:0px;
+                margin-top:0;
             }
             
-            section
+             nav li
+             {
+                display:inline;
+                padding:5px;
+                padding-left:18px;
+             }
+            
+            .body
             {
-                background-color:lightgrey;
-                height:400px;
-                color: black;
+                width:80%;
+                margin:0 auto;
+            }
+            
+            .body article
+            {
+                width:26%;
+                margin-right:5%;
+                padding:0 2%;
+                float:left;
+                background-color:#EEEEEE;
+            }
+
+            .body article:nth-child(3n+1)
+            {
+                margin-right:0;
+            }
+
+             .body article h1:first-child
+            {
+                font-size:24px;
+                margin:12px 0;
             }
             
             footer
             {
-                background-color:black;
-                height:20px;
-                text-align: center;
-                color: white;
+                margin-top:32px;
+                padding:6px;
+                background-color:#5FC8D1;
+                color:#FFFFFF;
+                text-align:center;
             }
 
         </style>
     </head>
-
-    <body>
-        <header>
-
-                <nav>
-                    <ul class="links">
-                        <li>Daily PHP </li>
-                    </ul>
-
-                    <ul class="rechts">
-                        <li><a href="">nieuws</a></li>
-                        <li><a href="">Onze redactie</a></li>
-                        <li><a href="">Contact</a></li>
-                    </ul>
-                </nav>
+    <body class="opdracht-include-require">
+         <header class="group">
+            <div class="logo">
+               <a href="#">Daily <span>PHP</span></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Nieuws</a></li>
+                    <li><a href="redactie.php">Onze Redactie</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                </ul>
+            </nav>
         </header>

@@ -2,6 +2,12 @@
 	$cursus 		= 	false;
 	$voorbeelden 	= 	false;
 	$opdrachten 	= 	false;
+	$lijst_opdracht	=	new RecursiveDirectoryIterator( '/Users/glenlauwers/Documents/School/Backend/web-backend/oplossingen/oefeningen');
+	$lijst_voorbeeld = new RecursiveDirectoryIterator('/Users/glenlauwers/Documents/School/Backend/web-backend/cursus/public/cursus/voorbeelden');
+	//var_dump($lijst_voorbeeld);
+	//var_dump($lijst_opdracht);
+
+
 
 	if (isset ($_GET['link']))
 	{
@@ -12,7 +18,7 @@
 				break;
 			
 			case 'voorbeelden':
-				$voorbeelden=	true;
+				$voorbeelden=	$lijst_voorbeeld;
 				break;
 
 			case 'opdrachten':
@@ -21,10 +27,7 @@
 		}
 	}
 
-
-
 ?>
-
 
 <!doctype html>
 <html>
@@ -33,9 +36,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Oplossing herhalingsopdracht 01</title>
 
-        <style>
-
-        </style>
     </head>
     <body>
         <section>
@@ -60,11 +60,31 @@
 
  				</form>
 
- 			<h2>Inhoud</h2>
 
  			<?php if ($cursus) : ?>
+ 				<h2>Cursus</h2>
  				<iframe src="extra/web-backend-cursus.pdf" width="1000px" height="750px"></iframe>
  			<?php endif?>
+
+ 			<?php if ($voorbeelden):?>
+ 				<h2>Voorbeelden</h2>
+ 				<?php foreach (new RecursiveIteratorIterator ($lijst_voorbeeld) as $filename):?>
+ 				 <ul>
+ 					<li><?= $filename?> </li>
+ 				</ul>
+
+ 				<?php endforeach ?>
+        	<?php endif ?>
+
+ 			<?php if ($opdrachten):?>
+ 				<h2>Opdrachten</h2>
+ 				<?php foreach (new RecursiveIteratorIterator ($lijst_opdracht) as $filename):?>
+ 				 <ul>
+ 					<li><?= $filename?> </li>
+ 				</ul>
+
+ 				<?php endforeach ?>
+        	<?php endif ?>
 
 		</section>
     </body>

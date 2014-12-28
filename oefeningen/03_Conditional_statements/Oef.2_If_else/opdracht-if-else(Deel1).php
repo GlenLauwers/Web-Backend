@@ -1,16 +1,15 @@
 <?php
-	$jaartal		= 	2001;
-	$jaartal_delen	=	($jaartal % 4==0) && (!$jaartal % 100==0) && ($jaartal % 400==0);
+    $jaartal        =   2012;
 
-	if ($jaartal_delen == true)
-	{
-		$antwoord	=	"Ja";
-	}
+    if ($jaartal == ($jaartal % 4==0) || (!$jaartal % 100==0) && ($jaartal % 400==0)) 
+    {
+        $bericht    =   'Het jaar '. $jaartal. ' is een schrikkeljaar.';
+    }
 
-	else
-	{
-		$antwoord	=	"Nee";
-	}
+    else
+    {
+        $bericht    =   'Het jaar '. $jaartal. ' is geen schrikkeljaar.';
+    }
 
 ?>
 <!doctype html>
@@ -22,12 +21,11 @@
     </head>
     <body class="web-backend-opdracht">
         
-        <section class="body">
-        
-            <h1>Oplossing if else: deel 1</h1>
- 
-            <p>Is <?= $jaartal ?> een schrikkeljaar? <?= $antwoord ?></p>
-        </section>
+        <h1>Oplossing If-else: Deel 1</h1>
+        <ul>
+            <li>Jaartal: <?= $jaartal ?></li>
+            <li><?= $bericht ?></li>
+        </ul>
 
     </body>
 </html>
