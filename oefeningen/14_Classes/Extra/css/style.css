@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* CSS Document */
+table
+{
+    border:1px solid lightgrey;
+    border-collapse:collapse;
+    max-width:350px;
+}
+
+td
+{
+    border:1px solid lightgrey;
+    padding:12px;
+    text-align: center;
+}
+
