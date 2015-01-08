@@ -1,8 +1,8 @@
 <?php
 
-	function __autoload($Classes) 
+	function __autoload($klassennaam) 
 	{
-	    include 'classes/Percent.php';
+	    include 'classes/' .$klassennaam. '.php';
 	}
 
 	$nummer_1	=	150;
@@ -21,9 +21,10 @@
     </head>
    	<body>
    		<h1>Oplossing classes: begin</h1>
+   		
 			<p>Hoeveel procent is <?php echo $nummer_1 ?> van <?php echo $nummer_2 ?>?</p>
+
 			<table>
-				
 					<tr>
 						<td>Absoluut</td>
 						<td><?= $percent->absolute ?></td>
