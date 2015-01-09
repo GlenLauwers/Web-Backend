@@ -48,7 +48,7 @@
 
     </head>
     <body>
-
+    
         <h1>Oplossingen functies gevorderd: deel 1</h1>
         
         <p>De needle '<?= $gezocht1?>' komt <?=$functie1 ?> % voor in de hash key '<?= $md5HashKey ?>'.</p>
