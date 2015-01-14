@@ -8,16 +8,16 @@
         <title>Oplossing classes: portfolio</title>
     </head>
     <body>
-    <header class="group">
-        <div class="logo">
-           <a href="#">Theo <span>Jansen</span></a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Strandbeesten</a></li><!--
-                --><li><a href="#">Galerij</a></li><!--
-                --><li><a href="#">Blog</a></li><!--
-                --><li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="portfolio">
+<header class="group">
+                            <div class="logo">
+                               <a href="#">Glen <span>Lauwers</span></a>
+                            </div>
+                            <nav>
+                                <ul>
+                                    <li><a href="#">Portfolio</a></li>
+                                    <li><a href="#">Over mij</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </header>

@@ -1,5 +1,6 @@
-        <footer>
-            <p>Dit is de footer</p>
-        </footer>
+                        <footer>
+                            dit is de footer
+                        </footer>
+                        </div>
 	</body>
 </html>
