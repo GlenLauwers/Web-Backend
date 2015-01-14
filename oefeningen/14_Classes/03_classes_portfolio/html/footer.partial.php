@@ -1,6 +1,7 @@
-                        <footer>
-                            dit is de footer
-                        </footer>
-                        </div>
-	</body>
+<footer>
+    Glen Lauwers 2015
+</footer>
+
+<?=$jsHtmlLinks ?>
+</body>
 </html>

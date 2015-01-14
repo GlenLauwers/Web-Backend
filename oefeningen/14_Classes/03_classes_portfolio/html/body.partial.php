@@ -1,67 +1,58 @@
-                        <section class="portfolio-body group">
-                            
-                            <section class="portfolio-content">
-                                <article>
-                                    <div class="head">
-                                        <img src="afbeelding/Oef_Collage_Glen_Lauwers.jpg" alt="Collage">
-                                        <div class="date">9<span>sep</span></div>
-                                        <div class="title">
-                                            <h1>New New New York</h1>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="content">
+<section class="portfolio-content">
+    <article>
+        <div class="head">
+            <img src="afbeelding/Oef_Collage_Glen_Lauwers.jpg" alt="Collage">
+            <div class="title">
+                <h1>New New New York</h1>
+            </div>
+            
+        </div>
+        <div class="content">
 
-                                        <p>De Animaris Rhonoceros Transport weegt 2,8 ton en is een zijtak in de strandbeesten evolutie maar kan desondanks door één enkele persoon worden voortbewogen door slim gebruik te maken van de wind. Je kunt er in zitten. Zoals een auto een vervoertuigd paard is en een vliegtuig gezien kan worden als een vervoertuigde vogel, zo kan de Animaris Rhinoceros Transport opgevat worden als een vervoertuigde Animaris (de Latijnse naam voor strandbeest).</p>
-                                        
-                                        <p>De Animaris Rhinoceros Transport die het stadsdeel Nieuw-West in de collectie heeft, is ontworpen door de kunstenaar maar de technische ontwikkeling en realisatie van dit lopende kunstwerk is in 2004 gedaan door het bedrijf Heijmerink | Wagemakers, Nieuwegein.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ex sem, tempor ultrices enim sit amet, mattis pretium odio. Fusce interdum leo consequat vehicula fringilla. Proin non nulla libero. Quisque porta dapibus commodo. Quisque ac congue massa. Nunc interdum dolor quis auctor dapibus. Pellentesque volutpat interdum varius. Ut id mi tellus. Etiam convallis odio sed felis viverra volutpat non quis eros. Morbi sit amet lacus neque.</p>
+            
+            <p>Nunc nec euismod eros. Integer semper sed elit a commodo. Nullam tempor turpis commodo, euismod justo eu, pulvinar orci. Maecenas quam ligula, molestie in ante ac, tempor lobortis ante. Curabitur ex neque, suscipit sit amet commodo a, vestibulum nec orci. Nulla facilisi. Phasellus euismod semper neque sed luctus. Mauris aliquam tortor sit amet purus eleifend, non fermentum ex euismod. Ut convallis eros sed quam consectetur, eget elementum urna sodales.</p>
 
-                                        <p>Het ontwerp waarmee kunstenaar Theo Jansen bij Heijmerink|Wagemakers kwam, was een kartonnen schaalmodel van 20 cm hoog waarin de unieke beweging van de Animaris al lag opgesloten. Het werkelijke beest is 4,5 meter hoog en 6 meter breed.</p>
+            <p>Mauris felis lectus, iaculis id consectetur ornare, volutpat et ligula. Nam elementum erat a maximus rhoncus. Aliquam iaculis eros in lorem tempus, sit amet blandit lacus dictum. Suspendisse vel blandit ipsum. Pellentesque molestie massa a enim aliquet dapibus. Nam lobortis non lorem sit amet faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum imperdiet pulvinar sapien et egestas.</p>
 
-                                        <p>De Animaris Rhinoceros Transport stond lange tijd in de Albardagracht (in de wijk Geuzenveld-Slotermeer), een plek waar hij niet tot zijn recht kwam. Afgelopen jaren heeft het stadsdeel de deze Animaris laten restaureren en is samen met de kunstenaar gezocht naar een betere plek in het stadsdeel. Dat is Business Park Amsterdam Osdorp (BPAO) geworden. Het kunstwerk wordt in de entreezone in een speciale kooi geplaatst (mei 2014). Het is de bedoeling dat ‘het beest’ zo nu en dan los gaat.</p>
-                                    </div>
-                                </article>
+            <p>Vestibulum dapibus gravida nibh, sed pretium augue pharetra et. Phasellus et felis rutrum, elementum sapien ac, congue orci. Morbi eros lorem, viverra a est sit amet, tincidunt fringilla nunc. Praesent eget enim nulla. Nunc nec bibendum elit. Aliquam erat volutpat. Donec tempus magna tortor, non aliquet elit faucibus ut. Quisque varius viverra varius. Maecenas malesuada dignissim ultricies. Nam in semper risus. Sed nunc turpis, gravida ac augue nec, sollicitudin cursus sapien. Nunc pretium elementum odio a tristique. Etiam sodales risus mollis hendrerit luctus. Morbi vitae quam felis. Maecenas volutpat felis turpis, nec luctus sapien fringilla in.</p>
+        </div>
+    </article>
 
-                                <section>
-                                    <a href="#">< ouder artikel</a> |
-                                    <a href="#">nieuwer artikel ></a>
-                                </section>
-                            </section>
-                            
-                            <section class="portfolio-aside">
-                                
-                                <section class="profile">
+</section>
 
-                                    <img src="afbeelding/foto.jpg" alt="Glen Lauwers">
-                                    <h1>Glen Lauwers</h1>
+<section class="portfolio-aside">
+    
+    <section class="profile">
 
-                                </section>
+        <img src="afbeelding/foto.jpg" alt="Glen Lauwers">
+        <h1>Glen Lauwers</h1>
 
-                                <section>
-                                    <h1>andere artikels</h1>
-                                    <ul>
-                                        <li>Handgestuurde Animaris Geneticus Ondula</li>
-                                        <li>Alles over de Jansen's Linkage</li>
-                                        <li>The Great Pretender - boek</li>
-                                        <li>Expositie in Japan</li>
-                                        <li>Interview in DWDD</li>
-                                    </ul>
-                                </section>
+    </section>
 
-                                <section>
-                                    <h1>categorieën</h1>
-                                    <ul class="cat">
-                                        <li>strandbeest</li>
-                                        <li>interview</li>
-                                        <li>expositie</li>
-                                        <li>evolutie</li>
-                                        <li>divers</li>
-                                        <li>animaris</li>
-                                        <li>bouwpakket</li>
-                                        <li>techniek</li>
-                                    </ul>
-                                </section>
+    <section>
+        <h1>andere artikels</h1>
+        <ul>
+            <li>HTML</li>
+            <li>Grafische ontwerpen</li>
+            <li>PHP</li>
+            <li>My SQL</li>
+            <li>Jquery</li>
+        </ul>
+    </section>
 
-                                
-                            </section>
-                        </section>
+    <section>
+        <h1>categorieën</h1>
+        <ul class="cat">
+            <li>Webdesign</li>
+            <li>Webmaster</li>
+            <li>Webontwikkelaar</li>
+            <li>Drupal-Developper</li>
+            <li>Photoshop</li>
+            <li>Illustrator</li>
+            <li>Dreamweaver</li>
+            <li>Fireworks</li>
+            <li>Sublime Text</li>
+        </ul>
+    </section>
+</section>

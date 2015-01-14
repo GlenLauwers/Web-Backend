@@ -1,10 +1,13 @@
 <?php
 
-    include 'html/header.partial.php';
+    function autoload ($klassennaam)
+    {
+    	include_once ('classes/' .$klassennaam. '.php');
+    }
 
-    include 'html/body.partial.php';
+    spl_autoload_register('autoload');
 
-    include 'html/footer.partial.php';
+    $website 	=	new HTMLBuilder ('header', 'body', 'footer');
 
 ?>
 

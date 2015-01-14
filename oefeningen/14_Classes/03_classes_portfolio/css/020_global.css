@@ -5,32 +5,37 @@ body
     background-color:#354052;
 }
 
-.portfolio
+html
 {
     font-family: "Raleway", sans-serif;
     font-size:14px;
 }
 
-.portfolio img
+img
 {
     max-width:100%;
     border:none;
 }
 
-.portfolio header
+header
 {
-    z-index:10;
+    position:absolute;
+    right: 0;
+    left: 0;
+    top:0;
+    z-index: 10;
     background-color:#FFFFFF;
     padding-left: 12px;
     box-shadow: 0 8px 6px -5px rgba(0,0,0,0.3);
+    height:48px;
 }
 
-.portfolio header a
+header a
 {
    color:#2B3536; 
 }
 
-.portfolio header .logo
+header .logo
 {
     float:left;
     font-size:18px;
@@ -39,30 +44,30 @@ body
     font-weight:300;
 }
 
-.portfolio header .logo a
+header .logo a
 {
     float:left;
     font-size:18px;
     text-decoration:none;
 }
-.portfolio header .logo span
+header .logo span
 {
     font-weight:500;
 }
 
-.portfolio nav
+nav
 {
     float:right;
 }
 
-.portfolio nav ul
+nav ul
 {
     list-style-type:none;
     padding:0px;
     margin-top:0;
 }
 
- .portfolio nav li
+nav li
  {
     display:inline-block;
     border-left:1px solid lightgrey;
@@ -70,7 +75,7 @@ body
 
  }
 
-.portfolio nav li a
+nav li a
 {
     display:inline-block;
     line-height:48px;
@@ -79,7 +84,7 @@ body
     transition: all 0.2s ease-in;
 }
 
-.portfolio nav li a:hover
+nav li a:hover
 {
     background-color:#ebf1f5;
 }
@@ -88,6 +93,7 @@ body
 {
     float:  right;
     width:30%;
+
 }
 .all-about-float
 {
@@ -103,23 +109,7 @@ body
 .portfolio-content .head
 {
     position:relative;
-}
-
-.portfolio-content .head .date
-{
-    position:absolute;
-    width:40px;
-    height:40px;
-    top:24px;
-    right:24px;
-    background-color:rgba(255,255,255,0.5);
-    border-radius:3px;
-    text-align:center;
-    font-weight:bold;
-    font-size:24px;
-    line-height:26px;
-    text-transform:uppercase;
-}                                                                       
+}                                                                    
                                                                                                                                          
 .portfolio-content .head .date span
 {
@@ -235,10 +225,10 @@ body
     margin:12px 0;
 }
 
-.portfolio footer
+footer
 {
     padding:6px;
-    color:#FFFFFF;
+    color:black;
     text-align:center;
     background-color:#ecf2f6;
     box-shadow: inset 0 8px 6px -5px rgba(0,0,0,0.3);
