@@ -1,6 +1,8 @@
 <?php
+
 	class Animal
 	{
+		//Members: Globale variabele
 		protected $name 	=	'';
 		protected $gender 	=	'';
 		protected $health 	=	'';
@@ -38,4 +40,5 @@
 			return 'Walk';
 		}
 	}
+	
 ?>

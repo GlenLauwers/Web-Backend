@@ -1,4 +1,5 @@
 <?php
+
 	class Lion extends Animal
 	{
 		protected $species	=	'';
@@ -19,4 +20,5 @@
 			return 'Roar';
 		}
 	}
+	
 ?>

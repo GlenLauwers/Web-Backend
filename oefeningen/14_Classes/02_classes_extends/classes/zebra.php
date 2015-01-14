@@ -1,4 +1,5 @@
 <?php
+
 	class Zebra extends Animal
 	{
 		protected $species 	=	'';
@@ -14,4 +15,5 @@
 			return $this->species;
 		}
 	}
+	
 ?>
