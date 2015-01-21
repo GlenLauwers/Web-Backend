@@ -2,8 +2,8 @@
 	$cursus 		= 	false;
 	$voorbeelden 	= 	false;
 	$opdrachten 	= 	false;
-	$lijst_opdracht	=	new RecursiveDirectoryIterator( '/Users/glenlauwers/Documents/School/Backend/web-backend/oplossingen/oefeningen');
-	$lijst_voorbeeld = new RecursiveDirectoryIterator('/Users/glenlauwers/Documents/School/Backend/web-backend/cursus/public/cursus/voorbeelden');
+	$lijst_opdracht	=	new RecursiveDirectoryIterator( '/Users/glenlauwers/Documents/School/2. Webontwikkelaar/Backend/web-backend/oplossingen/oefeningen');
+	$lijst_voorbeeld = new RecursiveDirectoryIterator('/Users/glenlauwers/Documents/School/2. Webontwikkelaar/Backend/web-backend/cursus/public/cursus/voorbeelden');
 	//var_dump($lijst_voorbeeld);
 	//var_dump($lijst_opdracht);
 
