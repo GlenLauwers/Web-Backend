@@ -15,7 +15,7 @@
 								INNER JOIN brouwers
 									ON bieren.brouwernr = brouwers.brouwernr
 								WHERE bieren.naam LIKE "Du%"
-								AND brouwers.brnaam LIKE "%a%"';
+								  AND brouwers.brnaam LIKE "%a%"';
 
 		$statement = $db->prepare( $query_string );
 
@@ -50,12 +50,12 @@
         <title>Oplossing: CRUD query</title>
 
         <style>
-			.even
-			{
-				background-color:lightgrey;
-			}
-
-			table
+			      .even
+			      {
+			      	background-color:lightgrey;
+			      }
+       
+			      table
             {
                 font-size:12px;
                 overflow:auto;
@@ -99,6 +99,7 @@
            	<table>
            		<thead>
            			<tr>
+                  <th>#</th>
            				<?php foreach ($kolom_naam as $kolom_naam): ?>
            					<th><?= $kolom_naam ?></th>
            				<?php endforeach ?>
@@ -106,15 +107,15 @@
            		</thead>
 
            		<tbody>	
-					<?php foreach ($bieren_array as $key => $bier): ?>
-						<tr class="<?= ( ( $key + 1) %2 == 0 ) ? 'even' : '' ?>">
-							<td><?= ($key + 1) ?></td>
-							<?php foreach ($bier as $value): ?>
-								<td><?= $value ?></td>
-							<?php endforeach ?>
-						</tr>
-					<?php endforeach ?>		
-				</tbody>
+					     <?php foreach ($bieren_array as $key => $bier): ?>
+					     	<tr class="<?= ( ( $key + 1) %2 == 0 ) ? 'even' : '' ?>">
+					     		<td><?= ($key + 1) ?></td>
+					     		<?php foreach ($bier as $waarde): ?>
+					     			<td><?= $waarde ?></td>
+					     		<?php endforeach ?>
+					     	</tr>
+					     <?php endforeach ?>		
+  				    </tbody>
            	</table>
             
         </section>  
