@@ -28,19 +28,19 @@
                                 <input type="text" id="brouwernaam" name="brouwernaam">
                             </li>
                             <li>
-                                <label for="adres">adres</label>
+                                <label for="adres">Adres</label>
                                 <input type="text" id="adres" name="adres">
                             </li>
                             <li>
-                                <label for="postcode">postcode</label>
+                                <label for="postcode">Postcode</label>
                                 <input type="text" id="postcode" name="postcode">
                             </li>
                             <li>
-                                <label for="gemeente">gemeente</label>
+                                <label for="gemeente">Gemeente</label>
                                 <input type="text" id="gemeente" name="gemeente">
                             </li>
                             <li>
-                                <label for="omzet">omzet</label>
+                                <label for="omzet">Omzet</label>
                                 <input type="text" id="omzet" name="omzet">
                             </li>
                         </ul>
