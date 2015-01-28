@@ -3,7 +3,7 @@
   $bericht      = '';
   $brouwers     = array();
   $bieren       = array();
-  $brouwer_ges  = '';
+  $brouwer_ges  = 1;
   $kolom_naam   = array();
   $kolom_naam[] = 'naam';
 
@@ -13,8 +13,8 @@
     $bericht  = 'Connectie met de database is gelukt.';
 
 //Alle brouwers binnenhalen
-    $brouwer_string = ' SELECT brnaam, brouwernr
-                        FROM brouwers';
+    $brouwer_string = ' SELECT brouwernr, brnaam
+                          FROM brouwers';
 
     $statement = $db->prepare($brouwer_string);
     $statement->execute();
@@ -30,25 +30,17 @@
     if (isset($_GET['brouwernr']))
     {
       $brouwer_ges = $_GET['brouwernr'];
-
-      $bieren_string  = ' SELECT bieren.naam
-                          FROM bieren 
-                          WHERE bieren.brouwernr = :brouwernr';
-
-      $statement = $db->prepare($bieren_string);
-
-      $statement->bindValue(':brouwernr', $_GET['brouwernr']);
-    }
-
-    else
-    {
-      $bieren_string  = ' SELECT bieren.naam
-                          FROM bieren';
+  }
+      $bieren_string  = ' SELECT naam
+                            FROM bieren 
+                            WHERE brouwernr = :brouwernr';
 
       $statement = $db->prepare($bieren_string);
-    }
 
-    $statement->execute();
+      $statement->bindValue(':brouwernr', $brouwer_ges);
+
+      $statement->execute();
+    
 
 //While voor de kolommen
     while($row = $statement->fetch(PDO::FETCH_ASSOC))
@@ -71,8 +63,7 @@
         <title>Oplossing: CRUD query</title>
 
         <style>
-            .even
-            {
+            .even{
               background-color:lightgrey;
             }
        
@@ -104,15 +95,14 @@
                 background-color:lightgreen;
             }
 
-            .even
-            {
-                background: #F1F1F1;
-            }
-
             a
             {
               text-decoration: none;
               color: black;
+            }
+
+            tr:nth-child(odd){
+              background: #F1F1F1;
             }
 
         </style>
@@ -124,11 +114,14 @@
           <p><?php echo $bericht ?></p>
 
           <form action="<?= $_SERVER['PHP_SELF'] ?>" method="GET">
-            <select name="brouwernr">
+            <label for="brouwers">Selecteer brouwers</label>
+
+            <select name="brouwernr" id="brouwers">
               <?php foreach ($brouwers as $key => $brouwer): ?>
                 <option value="<?= $brouwer['brouwernr'] ?>" <?= ( $brouwer_ges === $brouwer['brouwernr'] ) ? 'selected' : '' ?>><?= $brouwer['brnaam'] ?></option>
               <?php endforeach ?>
             </select>
+
             <input type="submit" value="Geef mij alle bieren van deze brouwerij">
 
           <button><a href="<?= $_SERVER['PHP_SELF'] ?>">Reset</a></button>
@@ -145,7 +138,7 @@
 
               <tbody> 
                 <?php foreach ($bieren as $key => $biernaam): ?>
-                  <tr class="<?= ( ( $key + 1) %2 == 0 ) ? 'even' : '' ?>">
+                  <tr>
                     <td><?= ( $key +1) ?></td>
                     <td><?= $biernaam ?></td>
                   </tr>
