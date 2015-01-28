@@ -2,6 +2,7 @@
 
 	$toegevoegd = '';
 
+
 	try
 	{
 		$db = new PDO('mysql:host=localhost;dbname=bieren', 'root', '');
@@ -53,7 +54,7 @@
         	#error{
         		color: red;
         	}
-        	
+
     		form{
     			width: 100px;
     		}
