@@ -88,7 +88,7 @@
           <?php foreach($beschrijving as $id =>$beschrijving):?>
             <?php if ($id=== 0):?>
               <li>
-                <form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>">
+                <form method="POST" action="index.php">
                   <button class="not_done" value="<?php echo $key ?>" name="wijzigen_todo" title="Status wijzigen"><?= $beschrijving ?></button>
                   <button class="verwijder" value="<?php echo $key ?>" name="verwijder_todo" title="verwijderen">Verwijder</button>
                 </form>
@@ -116,7 +116,7 @@
             <?php foreach($beschrijving as $id =>$beschrijving):?>
               <?php if ($id=== 0):?>
                 <li>
-                  <form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>">
+                  <form method="POST" action="index.php">
                     <button class="done" value="<?php echo $key ?>" name="wijzigen_done" title="Status wijzigen"><?= $beschrijving ?></button>
                     <button class="verwijder" value="<?php echo $key ?>" name="verwijder_done" title="verwijderen">Verwijder</button>
                   </form>
@@ -134,7 +134,7 @@
 
 
     <h1>Todo toevoegen</h1>
-    <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
+    <form action="index.php" method="POST">
       <ul>
         <li>
           <label for="beschrijving">Beschrijving:</label>
