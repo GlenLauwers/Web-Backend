@@ -75,7 +75,7 @@
     <h1>Todo app</h1>
 
   
-    <?php if ((!isset($_POST['beschrijving'])) && (empty($_SESSION['todo'])) && (empty($_SESSION['done']))):?>
+    <?php if ((empty($_SESSION['todo'])) && (empty($_SESSION['done']))):?>
       <p>Je hebt nog geen TODO's toegevoegd. Zo weinig werk of meesterplanner?</p>
     <?php endif ?>
 
