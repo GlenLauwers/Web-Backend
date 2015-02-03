@@ -2,7 +2,6 @@
   
   session_start();
   $error    = '';
-  $gedaan = false;
   $alles_gedaan= "Schouderklopje, alles is gedaan!";
 
 //Alles verwijderen
@@ -21,7 +20,7 @@
     //Als het veld "Beschrijving" niet leeg is
     if(!empty($_POST['beschrijving']))
     {
-      $lijst = array($_POST['beschrijving'],$gedaan);
+      $lijst = array($_POST['beschrijving']);
       $_SESSION['todo'][] = $lijst;  
     }
 
@@ -86,14 +85,12 @@
       <ul>
         <?php foreach ( $_SESSION['todo'] as $key => $beschrijving): ?>
           <?php foreach($beschrijving as $id =>$beschrijving):?>
-            <?php if ($id=== 0):?>
               <li>
                 <form method="POST" action="index.php">
                   <button class="not_done" value="<?php echo $key ?>" name="wijzigen_todo" title="Status wijzigen"><?= $beschrijving ?></button>
                   <button class="verwijder" value="<?php echo $key ?>" name="verwijder_todo" title="verwijderen">Verwijder</button>
                 </form>
               </li>
-            <?php endif?>
           <?php endforeach ?>
         <?php endforeach ?>
       </ul>
@@ -114,14 +111,12 @@
         <ul>
           <?php foreach ( $_SESSION['done'] as $key => $beschrijving): ?>
             <?php foreach($beschrijving as $id =>$beschrijving):?>
-              <?php if ($id=== 0):?>
                 <li>
                   <form method="POST" action="index.php">
                     <button class="done" value="<?php echo $key ?>" name="wijzigen_done" title="Status wijzigen"><?= $beschrijving ?></button>
                     <button class="verwijder" value="<?php echo $key ?>" name="verwijder_done" title="verwijderen">Verwijder</button>
                   </form>
                 </li>
-              <?php endif?>
             <?php endforeach ?>
           <?php endforeach ?>
         </ul>
