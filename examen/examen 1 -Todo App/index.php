@@ -2,7 +2,6 @@
   
   session_start();
   $error    = '';
-  $alles_gedaan= "Schouderklopje, alles is gedaan!";
 
 //Alles verwijderen
   if (isset($_GET['session']))
