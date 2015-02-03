@@ -25,7 +25,7 @@
     }
 
     //Als het veld "Beschrijving" leeg is
-    if(empty($_POST['beschrijving'])) 
+    elseif(empty($_POST['beschrijving'])) 
     {
         $error  = 'Oei, hier liep iets mis. Er is geen Todo ingevuld.';      
     }
@@ -75,7 +75,7 @@
     <h1>Todo app</h1>
 
   
-    <?php if ((!isset($_POST['beschrijving']))&& (empty($_SESSION['todo'])) && (empty($_SESSION['done']))):?>
+    <?php if ((!isset($_POST['beschrijving'])) && (empty($_SESSION['todo'])) && (empty($_SESSION['done']))):?>
       <p>Je hebt nog geen TODO's toegevoegd. Zo weinig werk of meesterplanner?</p>
     <?php endif ?>
 
