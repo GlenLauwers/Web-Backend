@@ -11,7 +11,7 @@
 		if (isset($_POST['submit'])) 
 		{
 			$brouwers_string 	= 'INSERT INTO brouwers (brnaam, adres, postcode, gemeente, omzet) 
-									VALUES (:brnaam, :adres, :postcode, :gemeente, :omzet)';
+									         VALUES (:brnaam, :adres, :postcode, :gemeente, :omzet)';
 
 			$statement 	= 	$db->prepare($brouwers_string);
 	
