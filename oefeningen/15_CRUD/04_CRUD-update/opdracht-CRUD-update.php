@@ -58,17 +58,17 @@
                                             postcode    =   :postcode,
                                             gemeente    =   :gemeente,
                                             omzet       =   :omzet
-                                    WHERE brouwernr = :brouwernr
+                                    WHERE brouwernr 	= 	:brouwernr
                                     LIMIT 1';
 
             $statement = $db->prepare( $update_query );
             
-            $statement->bindValue( ":brouwernr",  $_POST[ 'brouwernr' ] );                      
-            $statement->bindValue( ":brnaam",  $_POST[ 'brnaam' ] );                        
-            $statement->bindValue( ":adres",  $_POST[ 'adres' ] );                      
-            $statement->bindValue( ":postcode",  $_POST[ 'postcode' ] );                        
-            $statement->bindValue( ":gemeente",  $_POST[ 'gemeente' ] );                        
-            $statement->bindValue( ":omzet",  $_POST[ 'omzet' ] );
+            $statement->bindValue(":brouwernr", $_POST['brouwernr']);                      
+            $statement->bindValue(":brnaam", $_POST['brnaam']);                        
+            $statement->bindValue(":adres", $_POST['adres']);                      
+            $statement->bindValue(":postcode", $_POST['postcode']);                        
+            $statement->bindValue(":gemeente", $_POST['gemeente']);                        
+            $statement->bindValue(":omzet", $_POST['omzet']);
     
             $gewijzigd = $statement->execute( );
 
@@ -219,17 +219,18 @@
             <h1>Brouwerij <?= $edit['data'][0]['brnaam']?> (#<?= $edit['data'][0]['brouwernr']?>) wijzigen</h1>
             <form action="<?= $_SERVER[ 'PHP_SELF' ] ?>" method="POST">
                 <ul>
-                    <?php foreach ($edit['data'][0] as $fieldname => $value): ?>
+                    <?php foreach ($edit['data'][0] as $key => $value): ?>
                         
-                        <?php if ( $fieldname != "brouwernr" ): ?>
+                        <?php if ( $key != "brouwernr" ): ?>
                             <li>
-                                <label for="<?= $fieldname ?>"><?= $fieldname ?></label>
-                                <input type="text" id="<?= $fieldname ?>" name="<?= $fieldname ?>" value="<?= $value ?>">
+                                <label for="<?= $key ?>"><?= $key ?></label>
+                                <input type="text" id="<?= $key ?>" name="<?= $key ?>" value="<?= $value ?>">
                             </li>
                         <?php endif ?>
                         
                     <?php endforeach ?>
                 </ul>
+                
                 <input type="hidden" value="<?= $edit['data'][0]['brouwernr'] ?>" name="brouwernr">
                 <input type="submit" name="edit" value="Wijzigen">
             </form>

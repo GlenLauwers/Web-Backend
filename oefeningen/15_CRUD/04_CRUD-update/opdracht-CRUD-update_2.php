@@ -17,7 +17,7 @@
         if (isset($_POST['submit'])) 
         {
             $brouwers_string    = 'INSERT INTO brouwers (brnaam, adres, postcode, gemeente, omzet) 
-                                             VALUES (:brnaam, :adres, :postcode, :gemeente, :omzet)';
+                                   VALUES (:brnaam, :adres, :postcode, :gemeente, :omzet)';
 
             $statement  =   $db->prepare($brouwers_string);
     
@@ -71,7 +71,10 @@
 
         if (isset($_POST['confirm-edit']))
         {
-            $edit   =   query( $db, 'SELECT * FROM brouwers WHERE brouwernr = :brouwernr', array( ':brouwernr' => $_POST[ 'confirm-edit' ] ) );
+            $edit   =   query( $db, 'SELECT * 
+                                    FROM brouwers 
+                                    WHERE brouwernr = :brouwernr', 
+                                    array( ':brouwernr' => $_POST['confirm-edit']));
         
         }
         if (isset($_POST['edit'])) 
