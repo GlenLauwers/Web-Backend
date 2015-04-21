@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: localhost
--- Gegenereerd op: 16 apr 2015 om 13:46
+-- Gegenereerd op: 21 apr 2015 om 19:07
 -- Serverversie: 5.6.20
 -- PHP-versie: 5.5.15
 
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `gebruikers` (
 INSERT INTO `gebruikers` (`id`, `email`, `wachtwoord`) VALUES
 (22, 'glenlauwers@hotmail.com', '202cb962ac59075b964b07152d234b70'),
 (23, 'rina@hotmail.com', '202cb962ac59075b964b07152d234b70'),
-(24, 'aaa@aaa.be', '0cc175b9c0f1b6a831c399e269772661');
+(24, 'azer@a.be', '202cb962ac59075b964b07152d234b70');
 
 -- --------------------------------------------------------
 
@@ -52,16 +52,18 @@ CREATE TABLE IF NOT EXISTS `todos` (
   `e-mail_gebruiker` varchar(200) NOT NULL,
   `beschrijving` varchar(500) NOT NULL,
   `actief` tinyint(1) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `todos`
 --
 
 INSERT INTO `todos` (`id`, `e-mail_gebruiker`, `beschrijving`, `actief`) VALUES
-(5, 'glenlauwers@hotmail.com', '1', 0),
-(6, 'glenlauwers@hotmail.com', '2', 0),
-(7, 'glenlauwers@hotmail.com', '3', 0);
+(14, '24', 'melk', 1),
+(15, '24', 'cola', 2),
+(16, '24', 'ei', 2),
+(17, '24', 'cola', 0),
+(18, '22', 'a', 0);
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -92,7 +94,7 @@ MODIFY `id` int(4) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
 -- AUTO_INCREMENT voor een tabel `todos`
 --
 ALTER TABLE `todos`
-MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
