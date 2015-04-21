@@ -7,7 +7,7 @@
         require_once( $classname . '.php' );
     }
 
-    $db = new PDO('mysql:host=localhost;dbname=phpoefening030', 'root', '');
+    $db = new PDO('mysql:host=localhost;dbname=Bootstrap_2', 'root', '');
     $email  =    $_SESSION['registratie']['email'];
     
     $message    =   Message::getMessage();
@@ -15,8 +15,8 @@
     
     
     $query  =   'SELECT *
-                    FROM users
-                    where email = "'. $email.'"';
+                    FROM personeel
+                    where gebruikersnaam = "'. $gebruikersnaam.'"';
 
     $statement = $db->prepare($query);
     $statement->execute();
@@ -50,14 +50,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Oplossing CRUD: CMS</title>
+        <title>Geschenken</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body class="web-backend-opdracht">
         
         <section class="body">
             
-            <h1>Oplossing CRUD: CMS</h1>
+            <h1>Geschenken</h1>
 
             <p>U bent ingelogd als "<?= $email ?>" (<?= $gebruikers_type ?>) | <a href="logout.php">Uitloggen</a> </p>
 

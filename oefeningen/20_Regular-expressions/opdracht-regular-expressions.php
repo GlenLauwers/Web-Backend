@@ -5,7 +5,7 @@
     $resultaat      = '';
     $searchString   = '';
     $expression     = '';
-    $replaceString  =   '<span>#</span>';
+    $replaceString  = '<span>#</span>';
 
 
 
