@@ -1,10 +1,10 @@
 <?php
-if (isset($_COOKIE['auth_authenticated'])) 
+	if (isset($_COOKIE['auth_authenticated'])) 
 	{
 		$isvalid = $this->UserModel->validate();
 	}
 
-if (isset($_COOKIE['auth_authenticated']))
+	if (isset($_COOKIE['auth_authenticated']))
 	{
 		if ($isvalid) 
 		{
@@ -21,6 +21,7 @@ if (isset($_COOKIE['auth_authenticated']))
 ?>
 
 <p>Hebt u nog geen account? Klik dan <a href="registreren">hier om je te registreren</a>.</p>
+
 <?php if( $this->session->flashdata('fout')): ?>
 	<p class="error"><?php echo $this->session->flashdata('fout');?></p>
 <?php endif ?>

@@ -2,13 +2,6 @@
 
 class UserModel extends CI_Model
 {
-	
-	public function viewUsers()
-	{
-		$query= $this->db->get('gebruikers');
-		return $query->result();
-	}
-
 	public function validate()
 	{
 		$session= $this->session->userdata('value');
@@ -16,8 +9,6 @@ class UserModel extends CI_Model
 		$cookie= $_COOKIE['auth_authenticated'];
 
 		$isvalid = false;
-
-
 
 		if (isset($cookie)) 
 		{
@@ -35,3 +26,5 @@ class UserModel extends CI_Model
 		return $isvalid;
 	}
 }
+
+?>

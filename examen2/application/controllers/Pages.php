@@ -6,14 +6,15 @@ class Pages extends CI_Controller {
 
         	if ( ! file_exists(APPPATH.'/views/pages/'.$page.'.php'))
         	{
-                // Whoops, we don't have a page for that!
                 show_404();
        		}
 
-        	$data['titel'] = ucfirst($page); // Capitalize the first letter
+        	$data['titel'] = ucfirst($page);
 
         	$this->load->view('templates/header', $data);
         	$this->load->view('pages/'.$page, $data);
         	$this->load->view('templates/footer', $data);
         }
 }
+
+?>

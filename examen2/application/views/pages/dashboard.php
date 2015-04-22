@@ -1,10 +1,10 @@
 <?php
-if (isset($_COOKIE['auth_authenticated'])) 
+	if (isset($_COOKIE['auth_authenticated'])) 
 	{
 		$isvalid = $this->UserModel->validate();
 	}
 
-if ((!isset($_COOKIE['auth_authenticated'])) || (!$isvalid))
+	if ((!isset($_COOKIE['auth_authenticated'])) || (!$isvalid))
 	{
 		redirect('home');
 	}

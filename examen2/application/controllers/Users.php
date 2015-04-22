@@ -2,17 +2,8 @@
 
 class Users extends CI_Controller
 {
-	 
-	public function index()
-	{
-
-		$this->load->view("pages/login");
-			
-	}
-
 	public function insertUsers()
 	{
-
 		$email = $this->input->post('mail');
 		$wachtwoord = $this->input->post('wachtwoord');
 
@@ -20,38 +11,30 @@ class Users extends CI_Controller
 
 		if ((empty($email))||(empty($wachtwoord))||(empty($email)&&empty($wachtwoord)) ) 
 		{
-
 			$this->session->set_flashdata('fout', 'Oeps, Gelieve de onderstaande gegevens in te vullen.');
 			redirect('registreren');
-
 		}
 
 		if (!$isEmail) 
 		{
-
 			$this->session->set_flashdata('fout', 'Oeps, het E-mailadres heeft niet het juiste formaat.');
 			redirect('registreren');
-
 		}
 
 		else
 		{
-
 			$id = $this->input->post('mail');
 			$this->db->where('email',$id);
 			$query = $this->db->get('gebruikers');
 	
 			if ($query->num_rows() > 0)
 			{
-
 				$this->session->set_flashdata('fout', 'Oeps, Uw e-mailadres staat al in onze database. Gelieve een ander e-mailadres in te vullen.');
 				redirect('registreren');
-
 			}
 
 			else
 			{
-
 				$hashed_wachtwoord = md5($wachtwoord);
 				$hashed_gebruiker  = md5($email);
 
@@ -68,14 +51,12 @@ class Users extends CI_Controller
 
 				$this->session->set_flashdata('succes', 'Welkom, u bent geregistreerd.');
 				redirect("dashboard");
-
 			}
 		}
 	}
 
 	public function login()
 	{
-
 		$email = $this->input->post('mail');
 		$wachtwoord = $this->input->post('wachtwoord');
 
@@ -91,25 +72,19 @@ class Users extends CI_Controller
 
 		if ($query ->num_rows() == 1) 
 		{
-			
-				$this->setCookie();
+			$this->setCookie();
 
-				$this->setSession();				
+			$this->setSession();				
 
-				$this->session->set_flashdata('succes', 'Welkom, u bent ingelogd.');
-				redirect("dashboard");
-
+			$this->session->set_flashdata('succes', 'Welkom, u bent ingelogd.');
+			redirect("dashboard");
 		}
 			
 		else
 		{
-
 			$this->session->set_flashdata('fout', 'Uw email en/of wachtwoord is niet juist.');
 			redirect("login");
-
 		}
-		
-
 	}
 
 	public function logout()
@@ -121,7 +96,6 @@ class Users extends CI_Controller
 
 	public function setCookie()
 	{
-
 		$this->load->helper('cookie');
 
 		$email = $this->input->post('mail');
@@ -133,15 +107,13 @@ class Users extends CI_Controller
                    'name'   => 'authenticated',
                    'value'  => $hashed_gebruiker.$email,
                    'expire' => '3600'
-               );
+               		);
  
 		set_cookie($cookie); 
-
 	}
 
 	public function setSession()
 	{
-
 		$email = $this->input->post('mail');
 		$id = $this->db->get_where('gebruikers', array('email' => $email));
 
@@ -152,11 +124,9 @@ class Users extends CI_Controller
 		$session= array(
 					'name'=>'sessie',
 					'value' => $email,
-
-				);
+					);
 
 		$this->session->set_userdata($session);
-
 	}
 }
 
